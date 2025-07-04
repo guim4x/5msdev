@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5msdev – Em construção</title>
+  <title>5ms.Dev – Soluções em 5 minutos!</title>
 
   <!-- Favicon e meta preview -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -51,32 +51,55 @@
     }
 
     .bg-blur {
-      backdrop-filter: blur(10px);
-      background-color: rgba(11, 17, 32, 0.7);
+      backdrop-filter: blur(12px);
+      background-color: rgba(15, 23, 42, 0.75);
+    }
+
+    .tech-bg {
+      background-image: radial-gradient(circle at top left, rgba(0, 255, 255, 0.1), transparent 60%),
+        radial-gradient(circle at bottom right, rgba(99, 102, 241, 0.1), transparent 70%);
+    }
+
+    .btn-fake {
+      position: relative;
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: linear-gradient(to right, #06b6d4, #3b82f6);
+      color: white;
+      font-weight: 600;
+      border-radius: 0.5rem;
+      cursor: not-allowed;
+      opacity: 0.9;
+      transition: all 0.3s ease;
+    }
+
+    .btn-fake:hover {
+      opacity: 1;
+      filter: brightness(1.1);
     }
   </style>
 </head>
 
-<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
-  <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-indigo-500/5"></div>
+<body class="bg-gray-950 text-white min-h-screen flex items-center justify-center tech-bg">
+  <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-indigo-500/5 pointer-events-none"></div>
 
-  <div class="relative z-10 text-center px-6 py-10 max-w-xl bg-blur rounded-2xl shadow-xl animate-fade-in">
-    <!-- Logo -->
-    <img src="/favicon-180x180.png" alt="Logo 5msdev" class="w-24 h-24 mx-auto mb-6 glow rounded-full">
+  <div
+    class="relative z-10 text-center px-6 py-10 max-w-xl bg-blur rounded-2xl shadow-2xl animate-fade-in border border-white/10">
+    <!-- Logo com fundo transparente -->
+    <img src="/symbol-transparent.png" alt="Logo 5msdev" class="w-24 h-24 mx-auto mb-6 glow">
 
     <!-- Headline -->
-    <h1 class="text-3xl md:text-4xl font-bold mb-4">Estamos construindo algo incrível</h1>
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">Quem tá construindo não tem tempo pra explicar.</h1>
     <p class="text-gray-300 mb-8">
-      A 5msdev está desenvolvendo soluções digitais sob medida com velocidade, elegância e inovação. Em breve, mais
+      Estamos desenvolvendo soluções digitais sob medida com velocidade, elegância e inovação. Em breve, mais
       novidades.
     </p>
 
-    <a href="https://wa.me/5522988337918" target="_blank"
-      class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition glow">
-      Fale com a gente no WhatsApp
-    </a>
+    <!-- Botão fake -->
+    <span class="btn-fake glow">Enviar mensagem</span>
 
-    <p class="text-sm text-gray-400 mt-6">Ou envie um e-mail para <a href="mailto:hello@5ms.dev"
+    <p class="text-sm text-gray-500 mt-6">Ou envie um e-mail para <a href="mailto:hello@5ms.dev"
         class="underline hover:text-white">hello@5ms.dev</a></p>
   </div>
 </body>
