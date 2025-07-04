@@ -4,33 +4,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>5msdev – Soluções em 5 minutos</title>
+  <title>5msdev – Em construção</title>
 
-  <!-- 🔧 Favicon -->
+  <!-- Favicon e meta preview -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-
-  <!-- 📱 Meta tags para preview (WhatsApp, Instagram, Twitter, LinkedIn) -->
-  <meta name="title" content="5msdev – Soluções em 5 minutos">
-  <meta name="description" content="Criamos soluções digitais de forma rápida e profissional.">
-
-  <!-- Open Graph / WhatsApp -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://5ms.dev">
-  <meta property="og:title" content="5msdev – Soluções em 5 minutos">
-  <meta property="og:description" content="Criamos soluções digitais de forma rápida e profissional.">
+  <meta name="description"
+    content="Estamos desenvolvendo soluções digitais com velocidade, criatividade e tecnologia. Em breve, novidades.">
   <meta property="og:image" content="https://5ms.dev/og-image.jpg">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://5ms.dev">
-  <meta name="twitter:title" content="5msdev – Soluções em 5 minutos">
-  <meta name="twitter:description" content="Criamos soluções digitais de forma rápida e profissional.">
   <meta name="twitter:image" content="https://5ms.dev/og-image.jpg">
 
-  <!-- Tailwind CDN -->
+  <!-- Tailwind CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
-  <!-- 🖌️ Animações personalizadas -->
+  <!-- Estilos customizados -->
   <style>
     @keyframes fade-in {
       from {
@@ -44,27 +30,55 @@
       }
     }
 
-    .animate-fade-in {
-      animation: fade-in 0.8s ease-out both;
+    @keyframes pulse-glow {
+
+      0%,
+      100% {
+        box-shadow: 0 0 0px rgba(0, 255, 255, 0.3);
+      }
+
+      50% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+      }
     }
 
-    .animate-pulse-slow {
-      animation: pulse 3s infinite;
+    .animate-fade-in {
+      animation: fade-in 1s ease-out both;
+    }
+
+    .glow {
+      animation: pulse-glow 3s infinite;
+    }
+
+    .bg-blur {
+      backdrop-filter: blur(10px);
+      background-color: rgba(11, 17, 32, 0.7);
     }
   </style>
 </head>
 
-<body class="bg-gray-900 text-white flex items-center justify-center min-h-screen">
-  <div class="text-center px-4 animate-fade-in">
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">5msdev</h1>
-    <p class="text-lg md:text-2xl text-gray-300 mb-8">Soluções em 5 minutos</p>
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+  <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-indigo-500/5"></div>
 
-    <div class="space-y-4">
-      <a href="https://wa.me/5522988337918" target="_blank"
-        class="inline-block bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition animate-pulse-slow">
-        Fale com a gente no WhatsApp
-      </a>
-      <p class="text-sm text-gray-400">ou envie um e-mail para
-        <a href="mailto:hello@5ms.dev" class="underline hover:text-white">hello@5ms.dev</a>
-      </p>
-      </
+  <div class="relative z-10 text-center px-6 py-10 max-w-xl bg-blur rounded-2xl shadow-xl animate-fade-in">
+    <!-- Logo -->
+    <img src="/favicon-180x180.png" alt="Logo 5msdev" class="w-24 h-24 mx-auto mb-6 glow rounded-full">
+
+    <!-- Headline -->
+    <h1 class="text-3xl md:text-4xl font-bold mb-4">Estamos construindo algo incrível</h1>
+    <p class="text-gray-300 mb-8">
+      A 5msdev está desenvolvendo soluções digitais sob medida com velocidade, elegância e inovação. Em breve, mais
+      novidades.
+    </p>
+
+    <a href="https://wa.me/5522988337918" target="_blank"
+      class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-3 px-6 rounded-lg transition glow">
+      Fale com a gente no WhatsApp
+    </a>
+
+    <p class="text-sm text-gray-400 mt-6">Ou envie um e-mail para <a href="mailto:hello@5ms.dev"
+        class="underline hover:text-white">hello@5ms.dev</a></p>
+  </div>
+</body>
+
+</html>
