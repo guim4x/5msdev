@@ -5,15 +5,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5ms.Dev – Soluções em 5 minutos!</title>
-  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+  <!-- Favicon e meta preview -->
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <meta name="description"
     content="Estamos desenvolvendo soluções digitais com velocidade, criatividade e tecnologia. Em breve, novidades.">
-  <meta property="og:image" content="/og-image.jpg">
-  <meta name="twitter:image" content="/og-image.jpg">
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <meta property="og:image" content="https://5ms.dev/og-image.jpg">
+  <meta name="twitter:image" content="https://5ms.dev/og-image.jpg">
+
+  <!-- Tailwind CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+  <!-- Font (opcional tech-style) -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 
   <style>
-    @keyframes fade-in {
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(ellipse at center, #0f172a 0%, #0a0f1f 100%);
+      background-attachment: fixed;
+      color: white;
+    }
+
+    .fade-in {
+      animation: fadeIn 1.2s ease-in-out both;
+    }
+
+    @keyframes fadeIn {
       from {
         opacity: 0;
         transform: translateY(20px);
@@ -25,60 +43,66 @@
       }
     }
 
-    .animate-fade-in {
-      animation: fade-in 1s ease-out both;
+    .glow {
+      filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.8));
+      animation: pulse 3s infinite;
     }
 
-    .bg-blur {
-      backdrop-filter: blur(12px);
-      background-color: rgba(15, 23, 42, 0.75);
+    @keyframes pulse {
+      0% {
+        filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.3));
+      }
+
+      50% {
+        filter: drop-shadow(0 0 12px rgba(0, 255, 255, 0.8));
+      }
+
+      100% {
+        filter: drop-shadow(0 0 4px rgba(0, 255, 255, 0.3));
+      }
     }
 
-    .tech-backdrop {
-      background-image: radial-gradient(circle at 20% 30%, rgba(0, 255, 255, 0.05), transparent 60%),
-        radial-gradient(circle at 80% 80%, rgba(99, 102, 241, 0.08), transparent 60%);
-    }
-
-    .neon-btn {
-      background: linear-gradient(to right, #0ea5e9, #6366f1);
-      box-shadow: 0 0 12px rgba(14, 165, 233, 0.5);
-      color: white;
-      font-weight: 600;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      opacity: 0.95;
+    .btn-glass {
+      background: rgba(14, 165, 233, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(14, 165, 233, 0.3);
+      color: #0ea5e9;
       transition: all 0.3s ease;
-      cursor: not-allowed;
     }
 
-    .neon-btn:hover {
-      opacity: 1;
-      box-shadow: 0 0 24px rgba(14, 165, 233, 0.8);
+    .btn-glass:hover {
+      background: rgba(14, 165, 233, 0.2);
+      border-color: rgba(14, 165, 233, 0.6);
+      color: white;
     }
   </style>
 </head>
 
-<body class="bg-gray-950 text-white flex items-center justify-center min-h-screen tech-backdrop">
-  <div class="absolute inset-0 pointer-events-none"></div>
+<body class="min-h-screen flex flex-col items-center justify-center px-6 text-center">
 
-  <div
-    class="relative z-10 px-6 py-10 text-center max-w-xl bg-blur rounded-2xl shadow-xl animate-fade-in border border-white/10">
-    <img src="/symbol-transparent.png" alt="Logo 5msdev" class="w-20 h-20 mx-auto mb-6">
+  <!-- Logo -->
+  <img src="/favicon-180x180.png" alt="Logo 5msdev" class="w-20 h-20 mb-6 glow fade-in" />
 
-    <h1 class="text-3xl md:text-4xl font-bold mb-4">
-      Quem tá construindo não tem tempo pra explicar.
-    </h1>
+  <!-- Headline -->
+  <h1 class="text-3xl md:text-4xl font-bold fade-in mb-4">
+    Quem tá construindo não tem tempo pra explicar.
+  </h1>
 
-    <p class="text-gray-300 mb-8">
-      Estamos desenvolvendo soluções digitais sob medida com velocidade, elegância e inovação. Em breve, mais novidades.
-    </p>
+  <p class="text-gray-300 max-w-xl mx-auto fade-in mb-8">
+    Estamos desenvolvendo soluções digitais sob medida com velocidade, elegância e inovação. Em breve, mais novidades.
+  </p>
 
-    <span class="neon-btn">Enviar mensagem</span>
+  <!-- Fake Button -->
+  <button
+    class="btn-glass py-3 px-6 rounded-lg text-sm md:text-base font-semibold glow fade-in transition-all duration-300">
+    Enviar mensagem
+  </button>
 
-    <p class="text-sm text-gray-500 mt-6">
-      Ou envie um e-mail para <a href="mailto:hello@5ms.dev" class="underline hover:text-white">hello@5ms.dev</a>
-    </p>
-  </div>
+  <!-- Email -->
+  <p class="text-sm text-gray-500 mt-6 fade-in">
+    Ou envie um e-mail para <a href="mailto:hello@5ms.dev"
+      class="underline hover:text-white">hello@5ms.dev</a>
+  </p>
 </body>
 
 </html>
