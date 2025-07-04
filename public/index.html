@@ -24,7 +24,7 @@
     }
 
     .glow {
-      filter: drop-shadow(0 0 8px rgba(0, 255, 255, 0.8));
+      filter: drop-shadow(0 0 6px rgba(0, 255, 255, 0.8));
       animation: pulse 3s infinite;
     }
 
@@ -39,25 +39,6 @@
 
       100% {
         filter: drop-shadow(0 0 2px rgba(0, 255, 255, 0.2));
-      }
-    }
-
-    .neon-line {
-      position: absolute;
-      width: 2px;
-      height: 100vh;
-      background: linear-gradient(to bottom, transparent, cyan, transparent);
-      animation: moveDown 4s linear infinite;
-      opacity: 0.1;
-    }
-
-    @keyframes moveDown {
-      0% {
-        transform: translateY(-100%);
-      }
-
-      100% {
-        transform: translateY(100%);
       }
     }
 
@@ -77,27 +58,36 @@
       border-color: rgba(14, 165, 233, 0.8);
       color: white;
     }
+
+    .tight-flex {
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .tight-flex {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .logo-img {
+        width: 140px !important;
+      }
+    }
   </style>
 </head>
 
-<body class="relative min-h-screen flex items-center justify-center">
+<body class="min-h-screen flex items-center justify-center">
 
-  <!-- Neon Lines -->
-  <div class="neon-line left-1/4"></div>
-  <div class="neon-line left-1/2"></div>
-  <div class="neon-line left-3/4"></div>
+  <div class="flex tight-flex items-center px-6 max-w-6xl w-full">
 
-  <!-- Conteúdo -->
-  <div class="relative z-10 flex flex-col md:flex-row items-center text-center md:text-left px-6 max-w-5xl w-full">
-
-    <!-- Logo -->
-    <img src="/symbol-transparent.png" alt="Logo 5msdev"
-      class="w-full md:w-1/2 max-w-[320px] glow mb-10 md:mb-0 md:mr-10" />
+    <!-- Logo grande com alinhamento perfeito -->
+    <img src="/symbol-transparent.png" alt="Logo 5msdev" class="logo-img w-[160px] glow" />
 
     <!-- Texto -->
-    <div class="flex flex-col items-center md:items-start">
-      <h1 class="text-3xl md:text-4xl font-bold mb-3 text-white">
-        Quem tá construindo não tem<br class="hidden md:block"> tempo pra explicar.
+    <div class="flex flex-col justify-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3 leading-tight text-white">
+        Quem tá construindo não tem<br class="hidden md:block">tempo pra explicar.
       </h1>
       <p class="text-gray-300 mb-6 max-w-md text-sm md:text-base leading-relaxed">
         Estamos desenvolvendo soluções digitais sob medida com velocidade, elegância e inovação. Em breve, mais
@@ -111,6 +101,7 @@
       </p>
     </div>
   </div>
+
 </body>
 
 </html>
