@@ -6,14 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>5ms.Dev – Soluções em 5 minutos!</title>
 
-  <!-- Favicon e meta preview -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <meta name="description"
     content="Estamos desenvolvendo soluções digitais com velocidade, criatividade e tecnologia. Em breve, novidades.">
   <meta property="og:image" content="https://5ms.dev/og-image.jpg">
   <meta name="twitter:image" content="https://5ms.dev/og-image.jpg">
 
-  <!-- Tailwind CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 
@@ -90,22 +88,25 @@
   <div class="neon-line left-3/4"></div>
 
   <!-- Conteúdo -->
-  <div class="relative z-10 flex flex-col md:flex-row items-center text-center md:text-left px-6 max-w-4xl">
+  <div class="relative z-10 flex flex-col md:flex-row items-center text-center md:text-left px-6 max-w-5xl w-full">
 
     <!-- Logo -->
-    <img src="/symbol-transparent.png" alt="Logo 5msdev" class="w-20 h-20 md:w-28 md:h-28 mb-6 md:mb-0 md:mr-8 glow" />
+    <img src="/symbol-transparent.png" alt="Logo 5msdev"
+      class="w-full md:w-1/2 max-w-[320px] glow mb-10 md:mb-0 md:mr-10" />
 
     <!-- Texto -->
-    <div>
-      <h1 class="text-3xl md:text-4xl font-bold mb-3">Quem tá construindo não tem tempo pra explicar.</h1>
-      <p class="text-gray-300 mb-6 max-w-md">
+    <div class="flex flex-col items-center md:items-start">
+      <h1 class="text-3xl md:text-4xl font-bold mb-3 text-white">
+        Quem tá construindo não tem<br class="hidden md:block"> tempo pra explicar.
+      </h1>
+      <p class="text-gray-300 mb-6 max-w-md text-sm md:text-base leading-relaxed">
         Estamos desenvolvendo soluções digitais sob medida com velocidade, elegância e inovação. Em breve, mais
         novidades.
       </p>
 
-      <button class="btn-tech glow">Enviar mensagem</button>
+      <button class="btn-tech glow mb-4">Enviar mensagem</button>
 
-      <p class="text-sm text-gray-500 mt-5">
+      <p class="text-sm text-gray-500">
         Ou envie um e-mail para <a href="mailto:hello@5ms.dev" class="underline hover:text-white">hello@5ms.dev</a>
       </p>
     </div>
